@@ -35,11 +35,35 @@ function strings() {
     // convention in your code base 
     let myName = "Lemuel  S S";
 
-    /** concatenation is when you combining things together instead of adding them
-     * you use the + operator to concatenate.
-     * Concatenation sometime enforces type coercion when two different dtat types: 
-     * string and integer
+   
+    return myName
+}
+
+function concatenation() {
+    
+     /** concatenation is when you combine things together instead of adding
+      *  them (not always). You use the + operator to concatenate or join types
+     *   Concatenation sometimes enforces type coercion when two different 
+     *   data types: string and integer - are present.
+     * So if we "add" a string and a number - the number will be casted or
+     * converted to the string type: hence the term type coercion - 
+     * that can be a bad thing in js hence why we need typ safety like typescript
+     * which allows us to explicltyl (optionally) specifiy the type on declaration
      * 
      */
-    return myName
+
+
+    let myName = "lemuel S S";
+    let number = 12;
+    // using template literals to interpolate variables - notice the backticks
+    console.log(`adding number ${number} to a string ${myName}`)
+    let concatenation = myName + number;
+    return concatenation
+}
+
+function fullName() {
+    let firstName = "Lemuel";
+    let lastName = "Sauls";
+    let fullName = firstName + " " + lastName;
+    return fullName
 }
